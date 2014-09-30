@@ -1,29 +1,25 @@
-string = "may a moody baby doom a yam"
+string = "z may a moody baby doom a yam"
 
 def to_caesar_ciph(string, offset)
+  raise ArgumentError, 'Argument must be less than 26' unless offset < 26
+
   key = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  string = string.downcase
-  string = string.split('')
+  split_string = string.downcase.split('')
   cipher = ""
 
-  if offset <= 25
-    string.each do |e|
-      if e == " "
-        cipher << " "
-      else
-        n = key.index(e) + offset
-        if n > key.length
-          n = key.index(e) + (offset - key.length)
-        end
-        # binding.pry
-        cipher << key[n]
+  split_string.each do |e|
+    if e == " "
+      cipher.concat(" ")
+    else
+      n = key.index(e) + offset
+      if n >= 25
+        n = key.index(e) + (offset - 26)
       end
+      # binding.pry
+      cipher.concat(key[n])
     end
-
-  else
-    return "please enter an offset of 25 or less"
   end
   cipher
 end
 
-puts to_caesar_ciph(string, 3)
+puts to_caesar_ciph(string, 26)

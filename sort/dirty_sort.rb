@@ -1,5 +1,3 @@
-require 'pry'
-
 def dirty_sort(list)
   sorted = []
   while list.length > 0
@@ -15,5 +13,3 @@ def dirty_sort(list)
   sorted
 end
 
-list = [75, 100, -1, 85, 65, 84, 87, 65, 95]
-puts dirty_sort(list)

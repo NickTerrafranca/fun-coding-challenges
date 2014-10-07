@@ -1,4 +1,4 @@
-# A silly and unrealistic sorting algorithm of my own devising. Operates at O(N!), i think.
+# A silly and unrealistic sorting algorithm of my own devising.
 def dirty_sort(list)
   sorted = []
   while list.length > 0

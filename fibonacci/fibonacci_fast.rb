@@ -1,7 +1,6 @@
-require 'pry'
 require 'benchmark'
 
-NUMBER = 35
+NUMBER = 1000
 
 def fib_fast(n)
   sequence = []

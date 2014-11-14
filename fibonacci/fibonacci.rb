@@ -1,6 +1,6 @@
 require 'benchmark'
 
-NUMBER = 35
+NUMBER = 5
 
 def fibonacci(n)
   if n == 1 || n == 2

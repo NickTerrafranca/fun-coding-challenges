@@ -6,7 +6,7 @@ RSpec.describe 'Page Number Generator' do
   it 'calculates the page number layout of a book using a positive even number' do
     input = 10
 
-    expect(generate_pages(input)).to eq [[1, 10], [2, 9], [3, 8], [4, 7], [5, 6]]
+    expect(generate_pages(input)).to eq([[1, 10], [2, 9], [3, 8], [4, 7], [5, 6]])
   end
 
   it 'raises ArgumentError if an odd number is passed' do

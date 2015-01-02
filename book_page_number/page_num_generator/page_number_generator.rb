@@ -13,3 +13,5 @@ def generate_pages(n)
   end
   page_sequence
 end
+
+p generate_pages(100)

@@ -34,7 +34,7 @@ RSpec.describe 'Page Number Generator' do
   end
 
   it 'raises ArgumentError if decimal is passed' do
-    input = 10.5
+    input = 10.4
 
     expect{ generate_pages(input) }.to raise_error(ArgumentError)
   end

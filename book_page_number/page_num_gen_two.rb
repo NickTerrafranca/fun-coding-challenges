@@ -1,3 +1,4 @@
+# Generates a book page number layout with both even and odd numbers
 def generate_pages(n)
   first_page = 1
   last_page = (n - 1)
@@ -13,7 +14,7 @@ def generate_pages(n)
     end
     page_sequence.unshift([nil, remaining_page])
 
-  else
+  elsif n % 2 == 0 && n > 0
     last_page = n
 
     (n/2).times do |i|

@@ -1,3 +1,4 @@
+# Generates a book page number layout with an even number of pages, starting with the first/last page
 def generate_pages(n)
   if n % 2 == 0 && n > 0
     first_page = 1

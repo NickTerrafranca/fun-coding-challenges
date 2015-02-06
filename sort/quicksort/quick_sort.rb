@@ -2,7 +2,10 @@ require 'pry'
 unsorted_array = [3, 2, 1, 1, 2, 3]
 
 def quick_sort(list, start_point = nil, end_point = nil)
-  # This enables the initial call to quick_sort to require only the array as an argument
+  if list == []
+    return []
+  end
+# This enables the initial call to quick_sort to require only the array as an argument
   if start_point && end_point
     if start_point >= end_point
       return list

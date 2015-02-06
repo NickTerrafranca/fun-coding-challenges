@@ -11,3 +11,11 @@
 # this breaks the algorithm
 # unsorted_array = [3,3,3,1,1,1,2,2,2]
 # unsorted_array = [-13, 12, 1001, 589, 7, 36, 36, 11, 0, 27, 36, 92, 7, -2]
+
+
+
+
+# l = list[left]
+# r = list[right + 1]
+# list[right + 1] = l
+# list[left] = r

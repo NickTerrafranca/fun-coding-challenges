@@ -44,6 +44,12 @@ RSpec.describe 'quick_sort' do
     expect(quick_sort(input)).to eq([0, 0.1, 1, 1.1, 2, 3, 4, 5, 6, 7, 8, 9, 9.3])
   end
 
+  it 'returns [] if an empty array is passed' do
+    input = []
+
+    expect(quick_sort(input)).to eq([])
+  end
+
   it 'sorts an array containing duplicate values' do
     input = [3, 2, 1, 1, 2, 3]
 

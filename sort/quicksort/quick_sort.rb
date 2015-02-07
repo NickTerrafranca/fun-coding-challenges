@@ -1,11 +1,8 @@
-require 'pry'
-unsorted_array = [3, 2, 1, 1, 2, 3]
-
 def quick_sort(list, start_point = nil, end_point = nil)
   if list == []
     return []
   end
-# This enables the initial call to quick_sort to require only the array as an argument
+  # This enables the initial call to quick_sort to require only the array as an argument
   if start_point && end_point
     if start_point >= end_point
       return list
@@ -15,14 +12,13 @@ def quick_sort(list, start_point = nil, end_point = nil)
     pivot = left
   else
     left = 0
-    right = list.index(list[-1])
+    right = list.count - 1
     pivot = left
   end
 
   # These variables preserve the initial start and end values for later recursive calls
   min = left
   max = right
-
 
   while left < right
     if list[pivot] < list[right]
@@ -39,9 +35,6 @@ def quick_sort(list, start_point = nil, end_point = nil)
       pivot = left
     end
   end
-  # binding.pry
   quick_sort(list, min, pivot -1) # Recursively sort the left portion of array
   quick_sort(list, pivot +1, max) # Recursively sort the right portion of array
 end
-
-p quick_sort(unsorted_array)

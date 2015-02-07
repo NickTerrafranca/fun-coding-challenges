@@ -10,10 +10,10 @@ def quick_sort(list, start_point = nil, end_point = nil)
     left = start_point
     right = end_point
     pivot = start_point
-  else
+  else # In the initial call, left points to the left most element, right to the right most element and pivot is the same as left
     left = 0
     right = list.count - 1
-    pivot = 0
+    pivot = left
   end
 
   min = left # These variables preserve the initial start and end values for later recursive calls

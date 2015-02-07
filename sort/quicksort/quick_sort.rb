@@ -20,7 +20,6 @@ def quick_sort(list, start_point = nil, end_point = nil)
   max = right
 
   while left < right # The magic happens here
-
     if pivot == left
       if list[pivot] <= list[right]
         right -= 1

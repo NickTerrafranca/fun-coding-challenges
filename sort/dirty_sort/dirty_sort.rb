@@ -8,8 +8,8 @@ def dirty_sort(list)
         n = i
       end
     end
-  l = list.index(n)
-  sorted << list.slice!(l)
+    l = list.index(n)
+    sorted << list.slice!(l)
   end
   sorted
 end

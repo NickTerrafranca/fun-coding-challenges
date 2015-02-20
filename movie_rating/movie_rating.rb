@@ -1,7 +1,7 @@
 require 'csv'
 require 'json'
-require "net/http"
-require "uri"
+require 'net/http'
+require 'uri'
 
 def read_movie_file(file)
   movie_date = CSV.read(file)
@@ -36,11 +36,11 @@ def format_movie_data(query)
   movie_list = []
   query.each do |i|
     movie = JSON.parse(i.body)
-    unless movie["Error"] || movie["imdbRating"] == "N/A"
+    unless movie['Error'] || movie['imdbRating'] == 'N/A'
       movie_list << movie
     end
   end
-  movie_list.sort_by! { |k| k["imdbRating"] }.reverse
+  movie_list.sort_by! { |k| k['imdbRating'] }.reverse
 end
 
 def display_movie_data(formatted_data)
@@ -48,7 +48,6 @@ def display_movie_data(formatted_data)
     puts "#{i["Title"]} -- #{i["imdbRating"]}"
   end
 end
-
 
 movies = read_movie_file('movies.csv')
 parsed_data = parse_movie_data(movies)

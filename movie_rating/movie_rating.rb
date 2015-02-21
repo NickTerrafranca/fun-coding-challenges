@@ -18,7 +18,7 @@ def parse_movie_data(file_data)
 end
 
 def query_movie_data(parsed_data)
-  parsed_data = parsed_data[0..4]
+  # parsed_data = parsed_data[0..4]
   response_data = []
   parsed_data.each do |i|
     title = i[0]
@@ -45,7 +45,7 @@ end
 
 def display_movie_data(formatted_data)
   formatted_data.each do |i|
-    puts "#{i["Title"]} -- #{i["imdbRating"]}"
+    print "#{i["Title"]} -- #{i["imdbRating"]} | "
   end
 end
 

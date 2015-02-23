@@ -26,16 +26,14 @@ describe 'parse_movie_data' do
 end
 
 
-# RSpec.describe 'query_movie_data' do
-#   it 'queries the OMDB API for movie data' do
-#     file = 'test_movies.csv'
-#     input = read_movie_file(file)
-#     data  = parse_movie_data(input).first
+RSpec.describe 'query_movie_data' do
+  it 'queries the OMDB API for movie data' do
+    file = 'test_movies.csv'
+    input = read_movie_file(file)
+    data  = parse_movie_data(input).first
 
-#     expect(query_movie_data(data)).to eq([#<Net::HTTPOK 200 OK readbody=true>, #<Net::HTTPOK 200 OK readbody=true>])
-#     # expect(query_movie_data(data)).to_not eq([["7 Faces of Dr. Lao", "1964"], ["7th Heaven", "1927"], ["8 Mile", "2002"], ["12 Years a Slave", "2013"], ["20 Feet from Stardom", "2013"]])
-#   end
-# end
+  end
+end
 
 
 describe 'format_movie_data' do
@@ -51,17 +49,13 @@ end
 
 describe 'display_movie_data' do
   it 'displays the required content in the required order' do
-    # file = 'test_movies.csv'
-    # input = read_movie_file(file)
-    # data  = parse_movie_data(input)
-    # query = query_movie_data(data)
-    # formatted_data = format_movie_data(query)
-    movies = read_movie_file('test_movies.csv')
-    parsed_data = parse_movie_data(movies)
-    caputred_data = query_movie_data(parsed_data)
-    formatted_data = format_movie_data(caputred_data)
+    file = 'test_movies.csv'
+    input = read_movie_file(file)
+    data  = parse_movie_data(input)
+    query = query_movie_data(data)
+    formatted_data = format_movie_data(query)
+    # This is not working properly. I am getting something very unexpected
 
-    # display_movie_data(formatted_data)
     expect(display_movie_data(formatted_data)).to equal("12 Years a Slave -- 8.2 ~ 7th Heaven -- 7.9 ~ 7 Faces of Dr. Lao -- 7.3 ~ 8 Mile -- 6.9 ~ ")
   end
 end

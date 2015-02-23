@@ -4,7 +4,7 @@ require 'net/http'
 require 'uri'
 
 def read_movie_file(file)
-  movie_date = CSV.read(file)
+  movie_data = CSV.read(file)
 end
 
 def parse_movie_data(file_data)
@@ -18,7 +18,6 @@ def parse_movie_data(file_data)
 end
 
 def query_movie_data(parsed_data)
-  # parsed_data = parsed_data[0..4]
   response_data = []
   parsed_data.each do |i|
     title = i[0]
@@ -45,11 +44,12 @@ end
 
 def display_movie_data(formatted_data)
   formatted_data.each do |i|
-    print "#{i["Title"]} -- #{i["imdbRating"]} | "
+    print "#{i["Title"]} -- #{i["imdbRating"]} ~ "
   end
 end
 
 movies = read_movie_file('movies.csv')
 parsed_data = parse_movie_data(movies)
 caputred_data = query_movie_data(parsed_data)
-display_movie_data(format_movie_data(caputred_data))
+formatted_data = format_movie_data(caputred_data)
+display_movie_data(formatted_data)

@@ -8,6 +8,7 @@ def read_movie_file(file)
 end
 
 def parse_movie_data(file_data)
+  file_data = file_data # [1..2] remove this
   prepared_data = []
   file_data.each do |i|
     prepared_title = i[0].split.join('+')
@@ -48,8 +49,8 @@ def display_movie_data(formatted_data)
   end
 end
 
-movies = read_movie_file('movies.csv')
-parsed_data = parse_movie_data(movies)
-caputred_data = query_movie_data(parsed_data)
-formatted_data = format_movie_data(caputred_data)
-display_movie_data(formatted_data)
+# movies = read_movie_file('movies.csv')
+# parsed_data = parse_movie_data(movies)
+# caputred_data = query_movie_data(parsed_data)
+# formatted_data = format_movie_data(caputred_data)
+# p display_movie_data(formatted_data)

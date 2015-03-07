@@ -19,13 +19,11 @@ def bubble_sort(list)
     elsif list[left] > list[right]
       list[left], list[right] = list[right], list[left]
       swpapped = true
-      if right == end_of_list
+      if right == end_of_list #&& end_of_list > 1
         left = 0
         right = 1
         swpapped = false
-        # if end_of_list > 1
-        #   end_of_list -=1
-        # end
+        # end_of_list -=1
       else
         left +=1
         right +=1
@@ -43,4 +41,4 @@ def bubble_sort(list)
   end
   list
 end
-# p bubble_sort([3, 7, 5, 6, 4, 0, 1, 2, 9, 8])
+p bubble_sort([3, 7, 5, 6, 4, 0, 1, 2, 9, 8])

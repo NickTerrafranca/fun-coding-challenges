@@ -27,9 +27,9 @@ describe 'bubble_sort' do
   end
 
   it 'sorts an array of strings' do
-    input = ["a", "z", 'A', 'Robert', 'nick', 'total noob']
+    input = ['a', 'z', 'A', 'Robert', 'nick', 'total noob']
 
-    expect(bubble_sort(input)).to eq(["A", "Robert", "a", "door nob", "nick", "z"])
+    expect(bubble_sort(input)).to eq(['A', 'Robert', 'a', 'nick', 'total noob', 'z'])
   end
 
   it 'sorts an array of floats and integers' do

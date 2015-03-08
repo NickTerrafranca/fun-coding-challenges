@@ -1,17 +1,11 @@
 require 'rspec'
 require_relative 'bubble_sort'
 
-RSpec.describe 'bubble_sort' do
-  it 'sorts an unordered array with an even number of elements' do
+describe 'bubble_sort' do
+  it 'sorts an unordered array of positive integers' do
     input = [3, 7, 5, 6, 4, 0, 1, 2, 9, 8]
 
     expect(bubble_sort(input)).to eq([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-  end
-
-  it 'sorts an unordered array with an odd number of elements' do
-    input = [3, 7, 5, 6, 4, 1, 2, 9, 8]
-
-    expect(bubble_sort(input)).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9])
   end
 
   it 'returns the array when passed an already ordered array' do
@@ -33,7 +27,7 @@ RSpec.describe 'bubble_sort' do
   end
 
   it 'sorts an array of strings' do
-    input = ["a", "z", 'A', 'Robert', 'nick', 'door nob']
+    input = ["a", "z", 'A', 'Robert', 'nick', 'total noob']
 
     expect(bubble_sort(input)).to eq(["A", "Robert", "a", "door nob", "nick", "z"])
   end
@@ -55,9 +49,16 @@ RSpec.describe 'bubble_sort' do
 
     expect(bubble_sort(input)).to eq([-1, -1, 1, 1, 2, 2, 3, 3])
   end
+
   it "sorts an array of two elements" do
     input = [2, 1]
 
     expect(bubble_sort(input)).to eq([1, 2])
+  end
+
+  it "sorts an array of 1 element" do
+    input = [10]
+
+    expect(bubble_sort(input)).to eq([10])
   end
 end

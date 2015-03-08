@@ -1,5 +1,3 @@
-require 'pry'
-
 def bubble_sort(list)
   if list == []
     return list
@@ -7,38 +5,34 @@ def bubble_sort(list)
 
   end_of_list = list.length - 1
   is_sorted = false
-  swpapped = false
+  swapped = false
   left = 0
   right = 1
 
   while is_sorted == false
-
-    if swpapped == false && right == end_of_list
+    if swapped == false && left == end_of_list
       is_sorted = true
-
     elsif list[left] > list[right]
       list[left], list[right] = list[right], list[left]
-      swpapped = true
-      if right == end_of_list #&& end_of_list > 1
+      swapped = true
+      if right == end_of_list
         left = 0
         right = 1
-        swpapped = false
-        # end_of_list -=1
+        swapped = false
+        end_of_list -=1
       else
         left +=1
         right +=1
       end
-
     elsif right == end_of_list
       left = 0
       right = 1
-      swpapped = false
+      swapped = false
+      end_of_list -=1
     else
       left +=1
       right +=1
     end
-
   end
   list
 end
-p bubble_sort([3, 7, 5, 6, 4, 0, 1, 2, 9, 8])

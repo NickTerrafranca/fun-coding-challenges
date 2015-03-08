@@ -51,8 +51,13 @@ RSpec.describe 'bubble_sort' do
   end
 
   it 'sorts an array containing duplicate values' do
-    input = [3, 2, 1, 1, 2, 3]
+    input = [-1, 3, 2, 1, 1, 2, 3, -1]
 
-    expect(bubble_sort(input)).to eq([1, 1, 2, 2, 3, 3])
+    expect(bubble_sort(input)).to eq([-1, -1, 1, 1, 2, 2, 3, 3])
+  end
+  it "sorts an array of two elements" do
+    input = [2, 1]
+
+    expect(bubble_sort(input)).to eq([1, 2])
   end
 end

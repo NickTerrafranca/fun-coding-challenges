@@ -19,19 +19,19 @@ def bubble_sort(list)
         left = 0
         right = 1
         swapped = false
-        end_of_list -=1
+        end_of_list -= 1
       else
-        left +=1
-        right +=1
+        left += 1
+        right += 1
       end
     elsif right == end_of_list
       left = 0
       right = 1
       swapped = false
-      end_of_list -=1
+      end_of_list -= 1
     else
-      left +=1
-      right +=1
+      left += 1
+      right += 1
     end
   end
   list

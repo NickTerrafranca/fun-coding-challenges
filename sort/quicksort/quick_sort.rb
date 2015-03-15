@@ -12,7 +12,7 @@ def quick_sort(list, start_point = nil, end_point = nil)
     pivot = start_point
   else # In the initial call, left points to the left most element, right to the right most element and pivot is the same as left
     left = 0
-    right = list.count - 1
+    right = list.size - 1
     pivot = left
   end
 

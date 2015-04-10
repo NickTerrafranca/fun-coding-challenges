@@ -2,11 +2,11 @@
 # For example given an array [['LAX', 'BWI'], ['HNL', 'LAX'], ['SEA', 'HNL'], ['BOS', 'SEA']] where the first index of each sub array is the
 # departing airport and the second is the destination airport, the flight_path method would return [['BOS', 'SEA'], ['SEA', 'HNL'], ['HNL', 'LAX'], ['LAX', 'BWI']].
 class FlightTracker
-  attr_reader :list, :start_point, :flight_path
+  attr_reader :list, :flight_plan
   def initialize(list)
     @list = list
     @start_point = find_start_point
-    @flight_path = calculate_flight_path
+    @flight_plan = calculate_flight_path
   end
 
   def find_start_point
@@ -39,4 +39,4 @@ end
 
 flights = [['LAX', 'BWI'], ['HNL', 'LAX'], ['SEA', 'HNL'], ['BOS', 'SEA']]
 flight1 = FlightTracker.new(flights)
-p flight1.flight_path
+p flight1.flight_plan

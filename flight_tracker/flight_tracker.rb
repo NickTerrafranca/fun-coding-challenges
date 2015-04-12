@@ -11,17 +11,10 @@ class FlightTracker
   end
 
   def find_start_point
-    not_start_points = []
-    @list.each do |a|
-      @list.each do |b|
-        if a[0] == b[1]
-          not_start_points << a
-        end
-      end
+    @list.each_with_index do |sub, idx|
+      binding.pry
+      return idx if @list.flatten.count(sub[0]) == 1
     end
-    delta = list - not_start_points
-    delta = delta.flatten
-    list.index(delta)
   end
 
   def calculate_flight_path

@@ -11,15 +11,17 @@ class FlightTracker
   end
 
   def find_start_point
-    start_point = nil
+    same = []
     @list.each do |a|
       @list.each do |b|
-        if a[0] != b[1]
-          start_point = @list.index(a)
+        if a[0] == b[1]
+          same << a
         end
       end
     end
-    start_point
+    delta = list-same
+    delta = delta.flatten
+    start_point = list.index(delta)
   end
 
   def calculate_flight_path

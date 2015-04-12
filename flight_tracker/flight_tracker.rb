@@ -12,7 +12,6 @@ class FlightTracker
 
   def find_start_point
     @list.each_with_index do |sub, idx|
-      binding.pry
       return idx if @list.flatten.count(sub[0]) == 1
     end
   end

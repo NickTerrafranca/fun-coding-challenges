@@ -37,6 +37,6 @@ class FlightTracker
 
 end
 
-flights = [['LAX', 'BWI'], ['HNL', 'LAX'], ['SEA', 'HNL'], ['BOS', 'SEA']]
-flight1 = FlightTracker.new(flights)
-p flight1.flight_plan
+# flights = [['LAX', 'BWI'], ['BOS', 'SEA'], ['HNL', 'LAX'], ['SEA', 'HNL']]
+# flight1 = FlightTracker.new(flights)
+# p flight1.flight_plan

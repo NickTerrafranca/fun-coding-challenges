@@ -11,15 +11,15 @@ class FlightTracker
   end
 
   def find_start_point
-    same = []
+    not_start_points = []
     @list.each do |a|
       @list.each do |b|
         if a[0] == b[1]
-          same << a
+          not_start_points << a
         end
       end
     end
-    delta = list-same
+    delta = list - not_start_points
     delta = delta.flatten
     list.index(delta)
   end

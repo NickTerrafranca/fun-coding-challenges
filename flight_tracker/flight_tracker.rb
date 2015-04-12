@@ -1,6 +1,7 @@
 # This sorts an array of airport codes in a way that would simulate an aircrafts flight path between multiple cities.
 # For example: Given an array [['LAX', 'BWI'], ['HNL', 'LAX'], ['SEA', 'HNL'], ['BOS', 'SEA']] where the first index of each sub array is the
 # departing airport and the second is the destination airport, the flight_path method would return [['BOS', 'SEA'], ['SEA', 'HNL'], ['HNL', 'LAX'], ['LAX', 'BWI']].
+
 class FlightTracker
   attr_reader :list, :flight_plan
   def initialize(list)
@@ -34,9 +35,8 @@ class FlightTracker
     end
     flight_path
   end
-
 end
 
-# flights = [['LAX', 'BWI'], ['BOS', 'SEA'], ['HNL', 'LAX'], ['SEA', 'HNL']]
-# flight1 = FlightTracker.new(flights)
-# p flight1.flight_plan
+flights = [['LAX', 'BWI'], ['BOS', 'SEA'], ['HNL', 'LAX'], ['SEA', 'HNL']]
+flight1 = FlightTracker.new(flights)
+p flight1.flight_plan

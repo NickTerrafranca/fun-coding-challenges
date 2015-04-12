@@ -21,7 +21,7 @@ class FlightTracker
     end
     delta = list-same
     delta = delta.flatten
-    start_point = list.index(delta)
+    list.index(delta)
   end
 
   def calculate_flight_path
@@ -38,7 +38,3 @@ class FlightTracker
     flight_path
   end
 end
-
-flights = [['LAX', 'BWI'], ['BOS', 'SEA'], ['HNL', 'LAX'], ['SEA', 'HNL']]
-flight1 = FlightTracker.new(flights)
-p flight1.flight_plan

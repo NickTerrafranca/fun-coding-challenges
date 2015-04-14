@@ -7,7 +7,7 @@ class FlightTracker
   def initialize(list)
     @list = list
     @start_point = find_start_point
-    @flight_plan = calculate_flight_path
+    @flight_plan = sort_flight_path
   end
 
   def find_start_point
@@ -16,7 +16,7 @@ class FlightTracker
     end
   end
 
-  def calculate_flight_path
+  def sort_flight_path
     flight_path = [] << @list[@start_point]
     start = @start_point
     until flight_path.size == @list.size

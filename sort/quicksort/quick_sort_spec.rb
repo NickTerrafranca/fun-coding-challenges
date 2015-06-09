@@ -55,4 +55,16 @@ RSpec.describe 'quick_sort' do
 
     expect(quick_sort(input)).to eq([1, 1, 2, 2, 3, 3])
   end
+
+  it 'sorts an array of strings' do
+    input = ['this', 'is', 'an', 'array', 'of', 'strings']
+
+    expect(quick_sort(input)).to eq(['an', 'array', 'is', 'of', 'strings', 'this'])
+  end
+
+  it 'sorts a single string' do
+    input = 'zelda'
+
+    expect(quick_sort(input)).to eq('adelz')
+  end
 end

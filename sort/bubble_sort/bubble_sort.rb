@@ -1,8 +1,5 @@
 def bubble_sort(list)
-  if list == []
-    return list
-  end
-
+  return list if list == []
   end_of_list = list.length - 1
   is_sorted = false
   swapped = false

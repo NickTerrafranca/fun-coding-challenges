@@ -27,15 +27,15 @@ RSpec.describe 'quick_sort' do
   end
 
   it 'sorts an unordered array with negative numbers' do
-    input = [-13, 589, 11, 1001, 0, 27, 36, 92, 7, -2,]
+    input = [-13, 589, 11, 1001, 0, 27, 36, 92, 7, -2]
 
     expect(quick_sort(input)).to eq([-13, -2, 0, 7, 11, 27, 36, 92, 589, 1001])
   end
 
   it 'sorts an array of strings' do
-    input = ["a", "z", 'A', 'Robert', 'nick', 'door nob']
+    input = ['a', 'z', 'A', 'Robert', 'nick', 'door nob']
 
-    expect(quick_sort(input)).to eq(["A", "Robert", "a", "door nob", "nick", "z"])
+    expect(quick_sort(input)).to eq(['A', 'Robert', 'a', 'door nob', 'nick', 'z'])
   end
 
   it 'sorts an array of floats and integers' do
@@ -57,7 +57,7 @@ RSpec.describe 'quick_sort' do
   end
 
   it 'sorts an array of strings' do
-    input = ['this', 'is', 'an', 'array', 'of', 'strings']
+    input = %w(this is an array of strings)
 
     expect(quick_sort(input)).to eq(['an', 'array', 'is', 'of', 'strings', 'this'])
   end

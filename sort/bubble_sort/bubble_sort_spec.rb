@@ -21,7 +21,7 @@ describe 'bubble_sort' do
   end
 
   it 'sorts an unordered array with negative numbers' do
-    input = [-13, 589, 11, 1001, 0, 27, 36, 92, 7, -2,]
+    input = [-13, 589, 11, 1001, 0, 27, 36, 92, 7, -2]
 
     expect(bubble_sort(input)).to eq([-13, -2, 0, 7, 11, 27, 36, 92, 589, 1001])
   end
@@ -50,13 +50,13 @@ describe 'bubble_sort' do
     expect(bubble_sort(input)).to eq([-1, -1, 1, 1, 2, 2, 3, 3])
   end
 
-  it "sorts an array of two elements" do
+  it 'sorts an array of two elements' do
     input = [2, 1]
 
     expect(bubble_sort(input)).to eq([1, 2])
   end
 
-  it "sorts an array of 1 element" do
+  it 'sorts an array of 1 element' do
     input = [10]
 
     expect(bubble_sort(input)).to eq([10])

@@ -1,9 +1,7 @@
-require 'pry'
-
 def dinary_search(a, target)
   low = 0
   high = a.size - 1
-  calc_mid = -> (lo, hi) { lo + (hi-lo) / 2 }
+  calc_mid = -> (lo, hi) { (lo + hi) / 2 }
   mid = calc_mid.call(low, high)
   while low <= high
     if low == high && a[mid] != target
@@ -19,14 +17,3 @@ def dinary_search(a, target)
     end
   end
 end
-
-
-# unless a.sort
-  #   raise ArgumentError.new("Collection must be in ascending order")
-  # end
-# b = []
-# 1000.times { b << rand(100001) }
-# b.sort!
-a = [*1..100]
-p dinary_search(a, 53)
-

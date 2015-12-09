@@ -4,6 +4,7 @@ def factorial(n)
   elsif n <= 1
     1
   else
+    binding.pry
     n * factorial(n - 1)
   end
 end
